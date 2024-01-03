@@ -20,6 +20,11 @@ use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
 use App\Orchid\Screens\TyreStore\StoreScreen;
+use App\Orchid\Screens\TyreStore\WidthScreen;
+use App\Orchid\Screens\TyreStore\HeithScreen;
+use App\Orchid\Screens\TyreStore\CountryScreen;
+use App\Orchid\Screens\TyreStore\RadiusScreen;
+use App\Orchid\Screens\TyreStore\BrandScreen;
 /*
 |--------------------------------------------------------------------------
 | Dashboard Routes
@@ -36,6 +41,11 @@ Route::screen('/main', PlatformScreen::class)
     ->name('platform.main');
 
 Route::screen('/storescreen', StoreScreen::class)->name('platform.storescreen');
+Route::screen('/brandscreen', BrandScreen::class)->name('platform.brandscreen');
+Route::screen('/widthscreen', WidthScreen::class)->name('platform.widthscreen');
+Route::screen('/heithscreen', HeithScreen::class)->name('platform.heithscreen');
+Route::screen('/countryscreen', CountryScreen::class)->name('platform.countryscreen');
+Route::screen('/radiusscreen', RadiusScreen::class)->name('platform.radiusscreen');
 
 // Platform > Profile
 Route::screen('profile', UserProfileScreen::class)

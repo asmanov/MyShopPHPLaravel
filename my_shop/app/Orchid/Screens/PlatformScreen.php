@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Orchid\Screens;
 
+use App\Orchid\Layouts\Tyres\TyresStoreLayout;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
 
@@ -24,7 +25,7 @@ class PlatformScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'Get Started';
+        return 'StarTyres';
     }
 
     /**
@@ -32,7 +33,7 @@ class PlatformScreen extends Screen
      */
     public function description(): ?string
     {
-        return 'Welcome to your Orchid application.';
+        return 'Welcome to admin panel your shop.';
     }
 
     /**
@@ -53,8 +54,8 @@ class PlatformScreen extends Screen
     public function layout(): iterable
     {
         return [
-            Layout::view('platform::partials.update-assets'),
-            Layout::view('platform::partials.welcome'),
+            /*Layout::view('platform::partials.update-assets'),
+            Layout::view('platform::partials.welcome'),*/
         ];
     }
 }

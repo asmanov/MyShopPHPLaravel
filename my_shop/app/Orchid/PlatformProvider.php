@@ -34,10 +34,26 @@ class PlatformProvider extends OrchidServiceProvider
     public function menu(): array
     {
         return [
-            Menu::make('Sklad')
+            Menu::make('Склад автошин')
             ->icon('table')
             ->title('Склад')
-            ->route('platform.storescreen')
+            ->route('platform.storescreen'),
+            Menu::make('Список производителей')
+                ->icon('table')
+                ->title('Характеристики шин')
+                ->route('platform.brandscreen'),
+            Menu::make('Ширина шины')
+                ->icon('table')
+                ->route('platform.widthscreen'),
+            Menu::make('Профиль шины')
+                ->icon('table')
+                ->route('platform.heithscreen'),
+            Menu::make('Радиус шины')
+                ->icon('table')
+                ->route('platform.radiusscreen'),
+            Menu::make('Страна производства')
+                ->icon('table')
+                ->route('platform.countryscreen'),
 //            Menu::make('Get Started')
 //                ->icon('bs.book')
 //                ->title('Navigation')
