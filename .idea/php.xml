@@ -130,6 +130,8 @@
       <path value="$PROJECT_DIR$/my_shop/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/my_shop/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/my_shop/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/my_shop/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/my_shop/vendor/barryvdh/laravel-debugbar" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">

@@ -2,6 +2,8 @@
 
 namespace App\Orchid\Layouts\Tyres;
 
+use App\Models\Tyre;
+use Orchid\Screen\Actions\ModalToggle;
 use Orchid\Screen\Layouts\Table;
 use Orchid\Screen\TD;
 
@@ -41,6 +43,15 @@ class TyresStoreLayout extends Table
                 ->width('100px'),
             TD::make('price', 'Цена')->alignCenter()
                 ->width('100px')->sort('true'),
+            TD::make('action')->render(function (Tyre $tyre){
+                return ModalToggle::make('Редактировать')
+                    ->modal('editTyre')
+                    ->method('update')
+                    ->modalTitle('Редактировать данные')
+                    ->asyncParameters([
+                        'tyreId' => $tyre
+                    ]);
+            })
             ];
     }
 }
